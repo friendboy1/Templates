@@ -5,13 +5,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.*
 import androidx.navigation.fragment.findNavController
 import com.artofmainstreams.examples.R
 import com.artofmainstreams.examples.databinding.Fragment01Binding
 import com.artofmainstreams.examples.ui.example02.Fragment02
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.launch
 
-class Fragment01 : Fragment()  {
+class Fragment01 : Fragment() {
     private lateinit var binding: Fragment01Binding
 
     private lateinit var viewModel: ViewModel01
@@ -32,6 +34,56 @@ class Fragment01 : Fragment()  {
         }
         binding.buttonBack.setOnClickListener {
             findNavController().popBackStack()
+        }
+        init()
+    }
+
+    fun init() {
+        viewLifecycleOwner.lifecycle.coroutineScope.launch {
+            // должно использоваться только с viewLifecycleOwner
+            lifecycle.repeatOnLifecycle(Lifecycle.State.RESUMED) {
+                // onStart() -> onStop()
+            }
+        }
+        viewLifecycleOwner.lifecycle.coroutineScope.launch {
+            viewModel.dataFlow.flowWithLifecycle(lifecycle, Lifecycle.State.STARTED)
+                .collect {
+                    // обрабатываем значения
+                }
+        }
+        viewLifecycleOwner.lifecycleScope.launch {
+            // привязан к ЖЦ view во фрагменте
+            // onCreateView() -> onDestroyView()
+
+        }
+        lifecycleScope.launch {
+            // привязан к ЖЦ фрагмента
+            // onCreate() -> onDestroy()
+            whenCreated {
+                // onCreate() -> onDestroy()
+            }
+            whenStarted {
+                // onStart() -> onDestroy()
+            }
+            whenResumed {
+                // onResume() -> onDestroy()
+            }
+        }
+        lifecycleScope.launchWhenCreated {
+            // onCreate() -> onDestroy()
+        }
+        lifecycleScope.launchWhenStarted {
+            // onStart() -> onDestroy()
+        }
+        lifecycleScope.launchWhenResumed {
+            // onResume() -> onDestroy()
+            if (this@Fragment01.view != null) {
+                println()
+            }
+            // или
+            if (lifecycle.currentState >= Lifecycle.State.RESUMED) {
+                println()
+            }
         }
     }
 
