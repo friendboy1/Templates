@@ -33,8 +33,17 @@ class MainFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel = ViewModelProvider(this)[MainViewModel::class.java]
-        binding.button.setOnClickListener {
+        binding.buttonNext.setOnClickListener {
             SecondFragment.start(this)
+        }
+        binding.buttonBack.setOnClickListener {
+            findNavController().popBackStack()
+        }
+    }
+
+    companion object {
+        fun start(from: Fragment) {
+            from.findNavController().navigate(R.id.mainFragment)
         }
     }
 }

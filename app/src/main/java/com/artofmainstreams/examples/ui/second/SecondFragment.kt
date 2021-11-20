@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.artofmainstreams.examples.R
 import com.artofmainstreams.examples.databinding.SecondFragmentBinding
+import com.artofmainstreams.examples.ui.main.MainFragment
 
 /**
  * Второй фрагмент, возвращает на первый
@@ -32,13 +33,15 @@ class SecondFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel = ViewModelProvider(this)[SecondViewModel::class.java]
-        binding.button.setOnClickListener {
+        binding.buttonNext.setOnClickListener {
+            MainFragment.start(this)
+        }
+        binding.buttonBack.setOnClickListener {
             findNavController().popBackStack()
         }
     }
 
     companion object {
-
         fun start(from: Fragment) {
             from.findNavController().navigate(R.id.secondFragment)
         }
