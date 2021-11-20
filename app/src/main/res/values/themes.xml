@@ -1,0 +1,34 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Examples" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/color_purple_500</item>
+        <item name="colorPrimaryVariant">@color/color_purple_700</item>
+        <item name="colorOnPrimary">@color/color_purple_50</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/color_blue_200</item>
+        <item name="colorSecondaryVariant">@color/color_blue_700</item>
+        <item name="colorOnSecondary">@color/color_blue_900</item>
+    </style>
+
+    <style name="Theme.DayNight.Base" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorOnError">@color/color_red_500</item>
+        <item name="myFavoriteColor">@color/color_purple_300</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!--Params (прозрачный статус бар) -->
+        <item name="android:windowTranslucentStatus">true</item>
+        <!--Style attributes-->
+        <item name="textAppearanceHeadline1">@style/TextAppearance.Example.Headline1</item>
+        <item name="bottomSheetDialogTheme">@style/ThemeOverlay.Example.BottomSheetDialog</item>
+        <item name="chipStyle">@style/Widget.MaterialComponents.Chip.Action</item>
+        <item name="textInputStyle">@style/Widget.MaterialComponents.TextInputLayout.FilledBox</item>
+
+        <item name="shapeAppearanceSmallComponent">@style/Widget.Example.SmallShapeAppearance</item>
+    </style>
+
+    <style name="ThemeOverlay.Example" parent="ThemeOverlay.MaterialComponents.TextInputEditText">
+        <item name="colorPrimary">@color/color_blue_800</item>
+        <item name="colorOnSurface">@color/color_blue_100</item>
+    </style>
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextAppearance.Example.Headline1" parent="TextAppearance.MaterialComponents.Headline1" />
+
+    <style name="ThemeOverlay.Example.BottomSheetDialog" parent="Theme.MaterialComponents.BottomSheetDialog" />
+
+    <style name="Widget.Example.TextInputLayout.FilledBox" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="boxBackgroundMode">outline</item>
+        <item name="boxStrokeColor">@color/color_purple_500</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.Example.MediumComponent</item>
+    </style>
+
+    <style name="ShapeAppearance.Example.MediumComponent" parent="ShapeAppearance.MaterialComponents.MediumComponent" />
+
+    <style name="Widget.Example.SmallShapeAppearance" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamilyTopLeft">rounded</item>
+        <item name="cornerFamilyBottomRight">cut</item>
+        <item name="cornerSizeTopLeft">20dp</item>
+        <item name="cornerSizeBottomRight">15dp</item>
+    </style>
+
+    <attr name="myFavoriteColor" format="color|reference" />
+</resources>
