@@ -1,8 +1,13 @@
 # Description
-Всё про Android. RecyclerView, CustomView и т.д.
+Здесь собраны различные примеры с RecyclerView
 
 ## Navigation
-+ [up](https://github.com/friendboy1/Templates/tree/master)
++ [up](https://github.com/friendboy1/Templates/tree/android)
 + [root](https://github.com/friendboy1/Templates/tree/master)
-+ android/[recycler-view](https://github.com/friendboy1/Templates/tree/android_recycler-view) - всё про RecyclerView
-+ android/[custom-view](https://github.com/friendboy1/Templates/tree/android_custom-view) - всё про CustomView
+
+## Details
+#### Sample 1
+RecyclerView с секциями и горизонтальной ориентацией
+
+#### Sample 2
+RecyclerView с буквенной секцией
