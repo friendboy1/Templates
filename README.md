@@ -64,9 +64,9 @@ MotionLayout. Keyframes
 + `framePosition` - позиция, когда применяется keyframe</br>
 + `keyPositionType` - координатная система, использующая <code>parentRelative</code>, <code>deltaRelative</code>, <code>pathRelative</code></br>
 + `percentX / percentY` - координата x/y для указанной системы координат</br>
-![parentRelative](https://miro.medium.com/max/1400/1*PgRVDmgacQFedFr9X1oRpQ.png "https://miro.medium.com/max/1400/1*PgRVDmgacQFedFr9X1oRpQ.png") 
-![deltaRelative](https://miro.medium.com/max/1400/1*lPeWWsomgV10QRFBT7i9kQ.png "https://miro.medium.com/max/1400/1*lPeWWsomgV10QRFBT7i9kQ.png")
-![pathRelative](https://miro.medium.com/max/1400/1*CEBdlTMmXanZBg96IFDhLg.png "https://miro.medium.com/max/1400/1*CEBdlTMmXanZBg96IFDhLg.png")
+![parentRelative](https://miro.medium.com/max/1400/1*PgRVDmgacQFedFr9X1oRpQ.png "https://medium.com/google-developers/defining-motion-paths-in-motionlayout-6095b874d37") 
+![deltaRelative](https://miro.medium.com/max/1400/1*lPeWWsomgV10QRFBT7i9kQ.png "https://medium.com/google-developers/defining-motion-paths-in-motionlayout-6095b874d37")
+![pathRelative](https://miro.medium.com/max/1400/1*CEBdlTMmXanZBg96IFDhLg.png "https://medium.com/google-developers/defining-motion-paths-in-motionlayout-6095b874d37")
 
 #### Arc Motion
 Для движения по дуге, для начального <code>ConstraintSet</code> нужно установить <code>motion:pathMotionArc</code>
