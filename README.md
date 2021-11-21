@@ -1,5 +1,5 @@
 # Description
-По задумке, данный репозиторий планируется для содержания различных шпаргалок для меня.
+MotionLayout. Keyframes
 
 ## Branches
 + [main](https://github.com/friendboy1/Templates/tree/master)
