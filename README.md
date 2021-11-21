@@ -15,17 +15,17 @@
 + KeyTimeCycle
 
 Все они имеют следующие общие атрибуты:</br>
-+ motion:framePosition - в какой момент времени применяется keyframe (0..100)</br>
-+ motion:motionTarget - на какой объект влияет этот keyframe</br>
-+ motion:transitionEasing - какую кривую пути использовать (по умолчанию линейная)</br>
-+ motion:curveFit - spline (default) или linear, какая интерполяционная кривая соответствует keyfram'ам. 
++ <code>motion:framePosition</code> - в какой момент времени применяется keyframe (0..100)</br>
++ <code>motion:motionTarget</code> - на какой объект влияет этот keyframe</br>
++ <code>motion:transitionEasing</code> - какую кривую пути использовать (по умолчанию линейная)</br>
++ <code>motion:curveFit</code> - spline (default) или linear, какая интерполяционная кривая соответствует keyfram'ам. 
   По умолчанию - монотонная сплайн-кривая (monotonic spline curve), для более плавных переходов. 
   Но можно выбрать линейные сегменты (linear segments) вместо этого</br>
   
 #### Position Keyframes
 Позволяют указать путь движения. Можно использовать и несколько ConstraintSet вместо, если позволяют установить 
 состояния покоя, затем повесить слушателя <code>TransitionListener</code></br>
-<code>
+```xml
 <KeyFrameSet>
     <KeyPosition
         motion:keyPositionType="pathRelative"
@@ -44,12 +44,13 @@
         motion:percentY="-0.3"
         motion:framePosition="75"
         motion:target="@id/button"/>
-    </KeyFrameSet>
-</code>
+</KeyFrameSet>
+```
+
 
 #### XML Представление
-<code>
-<Transition ...>
+```xml
+<Transition>
     <KeyFrameSet>
         <KeyPosition
             motion:keyPositionType="parentRelative"
@@ -58,11 +59,11 @@
             motion:target="@+id/button"/>
     </KeyFrameSet>
 </Transition>
-</code>
-+ <code>target</code> - widget, к которому применяется keyframe</br>
-+ <code>framePosition</code> - позиция, когда применяется keyframe</br>
-+ <code>keyPositionType</code> - координатная система, использующая <code>parentRelative</code>, <code>deltaRelative</code>, <code>pathRelative</code></br>
-+ <code>percentX / percentY</code> - координата x/y для указанной системы координат</br>
+```
++ `target` - widget, к которому применяется keyframe</br>
++ `framePosition` - позиция, когда применяется keyframe</br>
++ `keyPositionType` - координатная система, использующая <code>parentRelative</code>, <code>deltaRelative</code>, <code>pathRelative</code></br>
++ `percentX / percentY` - координата x/y для указанной системы координат</br>
 [parentRelative](https://miro.medium.com/max/1400/1*PgRVDmgacQFedFr9X1oRpQ.png "https://miro.medium.com/max/1400/1*PgRVDmgacQFedFr9X1oRpQ.png") 
 [deltaRelative](https://miro.medium.com/max/1400/1*lPeWWsomgV10QRFBT7i9kQ.png "https://miro.medium.com/max/1400/1*lPeWWsomgV10QRFBT7i9kQ.png")
 [pathRelative](https://miro.medium.com/max/1400/1*CEBdlTMmXanZBg96IFDhLg.png "https://miro.medium.com/max/1400/1*CEBdlTMmXanZBg96IFDhLg.png")
