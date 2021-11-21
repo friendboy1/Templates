@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.artofmainstreams.examples.ui.drawer_layout.DrawerContent
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layoutDescription="@xml/scene_02_content">
+
+    <include layout="@layout/content_scrolling"/>
+
+    <include
+        android:id="@+id/bottom"
+        layout="@layout/content_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</com.artofmainstreams.examples.ui.drawer_layout.DrawerContent>

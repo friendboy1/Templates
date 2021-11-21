@@ -3,16 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_graph"
-    app:startDestination="@id/mainFragment">
+    app:startDestination="@id/coordinatorLayoutFragment">
 
     <fragment
-        android:id="@+id/mainFragment"
-        android:name="com.artofmainstreams.examples.ui.main.MainFragment"
-        android:label="main_fragment"
-        tools:layout="@layout/main_fragment" />
+        android:id="@+id/coordinatorLayoutFragment"
+        android:name="com.artofmainstreams.examples.ui.coordinator_layout.CoordinatorLayoutFragment"
+        android:label="coordinatorLayoutFragment"
+        tools:layout="@layout/coordinator_layout_fragment" />
     <fragment
-        android:id="@+id/secondFragment"
-        android:name="com.artofmainstreams.examples.ui.second.SecondFragment"
-        android:label="SecondFragment"
-        tools:layout="@layout/second_fragment" />
+        android:id="@+id/drawerLayoutFragment"
+        android:name="com.artofmainstreams.examples.ui.drawer_layout.DrawerLayoutFragment"
+        android:label="DrawerLayoutFragment"
+        tools:layout="@layout/drawer_layout_fragment" />
+    <fragment
+        android:id="@+id/viewPagerFragment"
+        android:name="com.artofmainstreams.examples.ui.view_pager.ViewPagerFragment"
+        android:label="ViewPagerFragment"
+        tools:layout="@layout/view_pager_fragment" />
 </navigation>
