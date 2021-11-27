@@ -1,5 +1,5 @@
 # Description
-Здесь связано то, что связано с JetPack
+Здесь связано то, что связано с JetPack Compose
 
 ## Branches
 + [main](https://github.com/friendboy1/Templates/tree/master)
