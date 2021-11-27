@@ -125,7 +125,7 @@ transitionEasing</code> со следующими параметрами:</br>
 
 + <code>android:visibility</code>
 + <code>android:alpha</code>
-+ <code>android:elevation начиная с SDK 21</code>
++ <code>android:elevation</code> начиная с SDK 21
 + <code>android:rotation</code>
 + <code>android:rotationX</code>
 + <code>android:rotationY</code>
@@ -133,7 +133,7 @@ transitionEasing</code> со следующими параметрами:</br>
 + <code>android:scaleY</code>
 + <code>android:translationX</code>
 + <code>android:translationY</code>
-+ <code>android:translationZ начиная с SDK 21</code>
++ <code>android:translationZ</code> начиная с SDK 21
 
 #### Custom Attributes
 
