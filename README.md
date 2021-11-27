@@ -5,15 +5,9 @@ MotionLayout. Keyframes
 ## Branches
 
 + [main](https://github.com/friendboy1/Templates/tree/master)
-+
-animation/motion-layout/[basic](https://github.com/friendboy1/Templates/tree/animation/motion-layout%2Fbasic)
-- пример анимации с использованием MotionLayout
-+
-animation/motion-layout/[examples](https://github.com/friendboy1/Templates/tree/animation/motion-layout/examples)
-- пример анимации с использованием CoordinatorLayout, DrawerLayout, ViewPager2
-+
-animation/motion-layout/[keyframes](https://github.com/friendboy1/Templates/tree/animation/motion-layout/keyframes)
-- более подробное изучение keyframes
++ animation/motion-layout/[basic](https://github.com/friendboy1/Templates/tree/animation/motion-layout%2Fbasic) - пример анимации с использованием MotionLayout
++ animation/motion-layout/[examples](https://github.com/friendboy1/Templates/tree/animation/motion-layout/examples) - пример анимации с использованием CoordinatorLayout, DrawerLayout, ViewPager2
++ animation/motion-layout/[keyframes](https://github.com/friendboy1/Templates/tree/animation/motion-layout/keyframes) - более подробное изучение keyframes
 
 ## Details
 
@@ -41,12 +35,23 @@ animation/motion-layout/[keyframes](https://github.com/friendboy1/Templates/tree
 ```xml
 
 <KeyFrameSet>
-    <KeyPosition motion:keyPositionType="pathRelative" motion:percentX="0.75" motion:percentY="-0.3"
-        motion:framePosition="25" motion:target="@id/button" />
-    <KeyPosition motion:keyPositionType="pathRelative" motion:percentY="-0.4"
-        motion:framePosition="50" motion:target="@id/button" />
-    <KeyPosition motion:keyPositionType="pathRelative" motion:percentX="0.25" motion:percentY="-0.3"
-        motion:framePosition="75" motion:target="@id/button" />
+    <KeyPosition 
+        motion:keyPositionType="pathRelative" 
+        motion:percentX="0.75" 
+        motion:percentY="-0.3"
+        motion:framePosition="25" 
+        motion:target="@id/button" />
+    <KeyPosition 
+        motion:keyPositionType="pathRelative" 
+        motion:percentY="-0.4"
+        motion:framePosition="50" 
+        motion:target="@id/button" />
+    <KeyPosition 
+        motion:keyPositionType="pathRelative"
+        motion:percentX="0.25" 
+        motion:percentY="-0.3"
+        motion:framePosition="75" 
+        motion:target="@id/button" />
 </KeyFrameSet>
 ```
 
@@ -56,8 +61,11 @@ animation/motion-layout/[keyframes](https://github.com/friendboy1/Templates/tree
 
 <Transition>
     <KeyFrameSet>
-        <KeyPosition motion:keyPositionType="parentRelative" motion:percentY="0.25"
-            motion:framePosition="50" motion:target="@+id/button" />
+        <KeyPosition 
+            motion:keyPositionType="parentRelative" 
+            motion:percentY="0.25"
+            motion:framePosition="50" 
+            motion:target="@+id/button" />
     </KeyFrameSet>
 </Transition>
 ```
@@ -102,8 +110,12 @@ transitionEasing</code> со следующими параметрами:</br>
 ```xml
 
 <KeyFrameSet>
-    <KeyAttribute android:scaleX="2" android:scaleY="2" android:rotation="-45"
-        motion:framePosition="50" motion:target="@id/button" />
+    <KeyAttribute 
+        android:scaleX="2" 
+        android:scaleY="2" 
+        android:rotation="-45"
+        motion:framePosition="50" 
+        motion:target="@id/button" />
 </KeyFrameSet>
 ```
 
@@ -124,20 +136,23 @@ transitionEasing</code> со следующими параметрами:</br>
 + android:translationZ начиная с SDK 21
 
 #### Custom Attributes
-Можно использовать кастомные атрибуты в <code>ConstraintSets</code> или <code>Keyframes</code>, создав child <code><CustomAttribute></code>. 
-Он должен иметь имя <code>attributeName</code> и одно из следующих значений:</br>
+
+Можно использовать кастомные атрибуты в <code>ConstraintSets</code> или <code>Keyframes</code>,
+создав child <code><CustomAttribute></code>. Он должен иметь имя <code>attributeName</code> и одно
+из следующих значений:</br>
+
 + customColorValue
 + customColorDrawableValue
 + customIntegerValue
 + customFloatValue
 + customStringValue
 + customDimension
-+ customBoolean
-Например:
++ customBoolean Например:
+
 ```xml
 <ConstraintSet android:id="@+id/start">
     <Constraint
-        android:id="@+id/button">
+        android:id="@+id/button" ...>
         <CustomAttribute
             motion:attributeName="backgroundColor"
             motion:customColorValue="#D81B60"/>
@@ -145,7 +160,7 @@ transitionEasing</code> со следующими параметрами:</br>
 </ConstraintSet>
 <ConstraintSet android:id="@+id/end">
     <Constraint
-        android:id="@+id/button">
+        android:id="@+id/button" ...>
         <CustomAttribute
             motion:attributeName="backgroundColor"
             motion:customColorValue="#9999FF"/>
