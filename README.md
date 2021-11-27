@@ -101,7 +101,7 @@ transitionEasing</code> со следующими параметрами:</br>
   контрольными точками кубической кривой безье от (0,0) до (1,1)
 + <code>standard</code>, <code>accelerate</code>, <code>decelerate</code> - предзаданные кривые.
   Подробности в
-  ![Material Design definitions](https://material.io/design/motion/speed.html#easing "Material Design definitions")
+  [Material Design definitions](https://material.io/design/motion/speed.html#easing "Material Design definitions")
 
 #### KeyAttribute
 
@@ -123,17 +123,17 @@ transitionEasing</code> со следующими параметрами:</br>
 
 Поддерживаемые атрибуты из коробки:</br>
 
-+ android:visibility
-+ android:alpha
-+ android:elevation начиная с SDK 21
-+ android:rotation
-+ android:rotationX
-+ android:rotationY
-+ android:scaleX
-+ android:scaleY
-+ android:translationX
-+ android:translationY
-+ android:translationZ начиная с SDK 21
++ <code>android:visibility</code>
++ <code>android:alpha</code>
++ <code>android:elevation начиная с SDK 21</code>
++ <code>android:rotation</code>
++ <code>android:rotationX</code>
++ <code>android:rotationY</code>
++ <code>android:scaleX</code>
++ <code>android:scaleY</code>
++ <code>android:translationX</code>
++ <code>android:translationY</code>
++ <code>android:translationZ начиная с SDK 21</code>
 
 #### Custom Attributes
 
@@ -141,14 +141,15 @@ transitionEasing</code> со следующими параметрами:</br>
 создав child <code><CustomAttribute></code>. Он должен иметь имя <code>attributeName</code> и одно
 из следующих значений:</br>
 
-+ customColorValue
-+ customColorDrawableValue
-+ customIntegerValue
-+ customFloatValue
-+ customStringValue
-+ customDimension
-+ customBoolean Например:
++ <code>customColorValue</code>
++ <code>customColorDrawableValue</code>
++ <code>customIntegerValue</code>
++ <code>customFloatValue</code>
++ <code>customStringValue</code>
++ <code>customDimension</code>
++ <code>customBoolean</code></br>
 
+Например:
 ```xml
 <ConstraintSet android:id="@+id/start">
     <Constraint
