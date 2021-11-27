@@ -1,5 +1,5 @@
 # Description
-По задумке, данный репозиторий планируется для содержания различных шпаргалок для меня.
+Здесь связано то, что связано с JetPack
 
 ## Branches
 + [main](https://github.com/friendboy1/Templates/tree/master)
