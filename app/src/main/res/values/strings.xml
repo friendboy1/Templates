@@ -9,4 +9,15 @@
     <string name="fragment05">Fragment05</string>
     <string name="fragment06">Fragment06</string>
     <string name="fragment07">Fragment07</string>
+    <string-array name="countries">
+        <item>Россия</item>
+        <item>Аргентина</item>
+        <item>США</item>
+        <item>Беларусь</item>
+        <item>Франция</item>
+        <item>Италия</item>
+        <item>Германия</item>
+        <item>Великобритания</item>
+        <item>Испания</item>
+    </string-array>
 </resources>

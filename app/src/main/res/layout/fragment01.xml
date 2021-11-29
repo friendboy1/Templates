@@ -16,6 +16,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/message"
+        app:layout_constraintBottom_toTopOf="@+id/button_back"
+        tools:listitem="@layout/item_section"
+        android:scrollbars="none" />
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_next"
         android:layout_width="wrap_content"
