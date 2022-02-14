@@ -16,6 +16,105 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <com.artofmainstreams.examples.ui.view.BasicCustomView
+        android:id="@+id/view1"
+        android:layout_width="128dp"
+        android:layout_height="64dp"
+        android:layout_margin="8dp"
+        app:type="example1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/message" />
+
+    <com.artofmainstreams.examples.ui.view.BasicCustomView
+        android:id="@+id/view2"
+        android:layout_width="128dp"
+        android:layout_height="64dp"
+        android:layout_margin="8dp"
+        app:type="example2"
+        app:layout_constraintStart_toEndOf="@+id/view1"
+        app:layout_constraintTop_toBottomOf="@+id/message" />
+
+    <com.artofmainstreams.examples.ui.view.BasicCustomView
+        android:id="@+id/view3"
+        android:layout_width="128dp"
+        android:layout_height="64dp"
+        android:layout_margin="8dp"
+        app:type="example3"
+        app:layout_constraintStart_toEndOf="@+id/view2"
+        app:layout_constraintTop_toBottomOf="@+id/message" />
+
+    <com.artofmainstreams.examples.ui.view.BasicCustomView
+        android:id="@+id/view4"
+        android:layout_width="128dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="8dp"
+        app:type="example4"
+        app:layout_constraintStart_toStartOf="@+id/view1"
+        app:layout_constraintTop_toBottomOf="@+id/view1" />
+
+    <com.artofmainstreams.examples.ui.view.BasicCustomView
+        android:id="@+id/view5"
+        android:layout_width="128dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="8dp"
+        app:type="example5"
+        app:layout_constraintStart_toStartOf="@+id/view2"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    <com.artofmainstreams.examples.ui.view.BasicCustomView
+        android:id="@+id/view6"
+        android:layout_width="128dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="8dp"
+        app:type="example6"
+        app:layout_constraintStart_toStartOf="@+id/view3"
+        app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+    <com.artofmainstreams.examples.ui.view.BasicCustomView
+        android:id="@+id/view7"
+        android:layout_width="128dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="8dp"
+        app:type="example7"
+        app:layout_constraintStart_toStartOf="@+id/view4"
+        app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+    <com.artofmainstreams.examples.ui.view.BasicCustomView
+        android:id="@+id/view8"
+        android:layout_width="128dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="8dp"
+        app:type="example8"
+        app:layout_constraintStart_toStartOf="@+id/view5"
+        app:layout_constraintTop_toBottomOf="@+id/view5" />
+
+    <com.artofmainstreams.examples.ui.view.BasicCustomView
+        android:id="@+id/view9"
+        android:layout_width="128dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="8dp"
+        app:type="example9"
+        app:layout_constraintStart_toStartOf="@+id/view6"
+        app:layout_constraintTop_toBottomOf="@+id/view6" />
+
+    <com.artofmainstreams.examples.ui.view.BasicCustomView
+        android:id="@+id/view10"
+        android:layout_width="256dp"
+        android:layout_height="128dp"
+        android:layout_marginTop="8dp"
+        app:type="example10"
+        app:layout_constraintStart_toStartOf="@+id/view7"
+        app:layout_constraintTop_toBottomOf="@+id/view7" />
+
+    <com.artofmainstreams.examples.ui.view.BasicCustomView
+        android:id="@+id/view11"
+        android:layout_width="256dp"
+        android:layout_height="128dp"
+        android:layout_marginTop="8dp"
+        app:type="example11"
+        app:layout_constraintStart_toStartOf="@+id/view10"
+        app:layout_constraintTop_toBottomOf="@+id/view10" />
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_next"
         android:layout_width="wrap_content"
