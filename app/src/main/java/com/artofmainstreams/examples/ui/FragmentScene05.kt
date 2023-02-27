@@ -1,43 +1,44 @@
-package com.artofmainstreams.examples.ui.example03
+package com.artofmainstreams.examples.ui
 
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.artofmainstreams.examples.R
-import com.artofmainstreams.examples.databinding.Fragment03Binding
-import com.artofmainstreams.examples.ui.example04.Fragment04
+import com.artofmainstreams.examples.databinding.FragmentScene05Binding
 
-class Fragment03 : Fragment()  {
-    private lateinit var binding: Fragment03Binding
+/**
+ * Фрагмент с затемняющейся картинкой
+ *
+ * @author Andrei Khromov on 20.11.2021
+ */
+class FragmentScene05 : Fragment() {
 
-    private lateinit var viewModel: ViewModel03
+    private lateinit var binding: FragmentScene05Binding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = Fragment03Binding.inflate(inflater, container, false)
+        binding = FragmentScene05Binding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel = ViewModelProvider(this)[ViewModel03::class.java]
-        binding.buttonNext.setOnClickListener {
-            Fragment04.start(this)
-        }
         binding.buttonBack.setOnClickListener {
             findNavController().popBackStack()
+        }
+        binding.buttonNext.setOnClickListener {
+            FragmentScene06.start(this)
         }
     }
 
     companion object {
         fun start(from: Fragment) {
-            from.findNavController().navigate(R.id.fragment03)
+            from.findNavController().navigate(R.id.fragmentScene05)
         }
     }
 }

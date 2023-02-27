@@ -1,20 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.example05.Fragment05">
+    app:layoutDescription="@xml/scene_05"
+    tools:showPaths="true">
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/fragment05"
+        android:gravity="center"
+        android:text="scene 05"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="256dp"
+        android:src="@drawable/city"
+        android:background="@color/color_purple_200" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_next"
@@ -34,4 +43,4 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.motion.widget.MotionLayout>

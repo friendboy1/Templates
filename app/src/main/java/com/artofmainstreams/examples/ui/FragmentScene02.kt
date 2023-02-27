@@ -1,43 +1,44 @@
-package com.artofmainstreams.examples.ui.example02
+package com.artofmainstreams.examples.ui
 
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.artofmainstreams.examples.R
-import com.artofmainstreams.examples.databinding.Fragment02Binding
-import com.artofmainstreams.examples.ui.example03.Fragment03
+import com.artofmainstreams.examples.databinding.FragmentScene02Binding
 
-class Fragment02 : Fragment()  {
-    private lateinit var binding: Fragment02Binding
+/**
+ * Второй фрагмент, все настройки внутри MotionScene
+ *
+ * @author Andrei Khromov on 20.11.2021
+ */
+class FragmentScene02 : Fragment() {
 
-    private lateinit var viewModel: ViewModel02
+    private lateinit var binding: FragmentScene02Binding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = Fragment02Binding.inflate(inflater, container, false)
+        binding = FragmentScene02Binding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel = ViewModelProvider(this)[ViewModel02::class.java]
-        binding.buttonNext.setOnClickListener {
-            Fragment03.start(this)
-        }
         binding.buttonBack.setOnClickListener {
             findNavController().popBackStack()
+        }
+        binding.buttonNext.setOnClickListener {
+            FragmentScene03.start(this)
         }
     }
 
     companion object {
         fun start(from: Fragment) {
-            from.findNavController().navigate(R.id.fragment02)
+            from.findNavController().navigate(R.id.fragmentScene02)
         }
     }
 }

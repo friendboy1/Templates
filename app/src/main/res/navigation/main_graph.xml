@@ -3,41 +3,41 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_graph"
-    app:startDestination="@id/fragment01">
+    app:startDestination="@id/fragmentScene01">
 
     <fragment
-        android:id="@+id/fragment01"
-        android:name="com.artofmainstreams.examples.ui.example01.Fragment01"
-        android:label="Fragment01"
-        tools:layout="@layout/fragment01" />
+        android:id="@+id/fragmentScene01"
+        android:name="com.artofmainstreams.examples.ui.FragmentScene01"
+        android:label="main_fragment"
+        tools:layout="@layout/fragment_scene_01" />
     <fragment
-        android:id="@+id/fragment02"
-        android:name="com.artofmainstreams.examples.ui.example02.Fragment02"
-        android:label="Fragment02"
-        tools:layout="@layout/fragment02" />
+        android:id="@+id/fragmentScene02"
+        android:name="com.artofmainstreams.examples.ui.FragmentScene02"
+        android:label="SecondFragment"
+        tools:layout="@layout/fragment_scene_02" />
     <fragment
-        android:id="@+id/fragment03"
-        android:name="com.artofmainstreams.examples.ui.example03.Fragment03"
-        android:label="Fragment03"
-        tools:layout="@layout/fragment03" />
+        android:id="@+id/fragmentScene03"
+        android:name="com.artofmainstreams.examples.ui.FragmentScene03"
+        android:label="FragmentScene03"
+        tools:layout="@layout/fragment_scene_03"/>
     <fragment
-        android:id="@+id/fragment04"
-        android:name="com.artofmainstreams.examples.ui.example04.Fragment04"
-        android:label="Fragment04"
-        tools:layout="@layout/fragment04" />
+        android:id="@+id/fragmentScene04"
+        android:name="com.artofmainstreams.examples.ui.FragmentScene04"
+        android:label="FragmentScene04"
+        tools:layout="@layout/fragment_scene_04" />
     <fragment
-        android:id="@+id/fragment05"
-        android:name="com.artofmainstreams.examples.ui.example05.Fragment05"
-        android:label="Fragment05"
-        tools:layout="@layout/fragment05" />
+        android:id="@+id/fragmentScene05"
+        android:name="com.artofmainstreams.examples.ui.FragmentScene05"
+        android:label="FragmentScene05"
+        tools:layout="@layout/fragment_scene_05" />
     <fragment
-        android:id="@+id/fragment06"
-        android:name="com.artofmainstreams.examples.ui.example06.Fragment06"
-        android:label="Fragment06"
-        tools:layout="@layout/fragment06" />
+        android:id="@+id/fragmentScene06"
+        android:name="com.artofmainstreams.examples.ui.FragmentScene06"
+        android:label="FragmentScene06"
+        tools:layout="@layout/fragment_scene_06" />
     <fragment
-        android:id="@+id/fragment07"
-        android:name="com.artofmainstreams.examples.ui.example07.Fragment07"
-        android:label="Fragment07"
-        tools:layout="@layout/fragment07" />
+        android:id="@+id/fragmentScene07"
+        android:name="com.artofmainstreams.examples.ui.FragmentScene07"
+        android:label="FragmentScene07"
+        tools:layout="@layout/fragment_scene_07" />
 </navigation>
