@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.artofmainstreams.examples.ui.coordinator_layout.CollapsibleToolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/motionLayout"
+    app:layoutDescription="@xml/scene_01"
+    android:layout_width="match_parent"
+    android:layout_height="256dp"
+    android:minHeight="50dp"
+    android:fitsSystemWindows="false"
+    app:layout_scrollFlags="scroll|enterAlways|snap|exitUntilCollapsed">
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/color_purple_50"
+        android:scaleType="centerCrop"
+        android:src="@drawable/toolbar_background"/>
+
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:transformPivotX="0dp"
+        android:transformPivotY="0dp"
+        android:text="Coordinator"
+        android:textColor="#FFF"
+        android:textSize="32sp" />
+
+    <TextView
+        android:id="@+id/sublabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="scene 01"
+        android:textColor="#FFF"
+        android:textSize="24sp"
+        app:fontFamily="cursive" />
+
+</com.artofmainstreams.examples.ui.coordinator_layout.CollapsibleToolbar>

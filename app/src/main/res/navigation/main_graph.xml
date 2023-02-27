@@ -3,41 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_graph"
-    app:startDestination="@id/fragment01">
+    app:startDestination="@id/coordinatorLayoutFragment">
 
     <fragment
-        android:id="@+id/fragment01"
-        android:name="com.artofmainstreams.examples.ui.example01.Fragment01"
-        android:label="Fragment01"
-        tools:layout="@layout/fragment01" />
+        android:id="@+id/coordinatorLayoutFragment"
+        android:name="com.artofmainstreams.examples.ui.coordinator_layout.CoordinatorLayoutFragment"
+        android:label="coordinatorLayoutFragment"
+        tools:layout="@layout/coordinator_layout_fragment" />
     <fragment
-        android:id="@+id/fragment02"
-        android:name="com.artofmainstreams.examples.ui.example02.Fragment02"
-        android:label="Fragment02"
-        tools:layout="@layout/fragment02" />
+        android:id="@+id/drawerLayoutFragment"
+        android:name="com.artofmainstreams.examples.ui.drawer_layout.DrawerLayoutFragment"
+        android:label="DrawerLayoutFragment"
+        tools:layout="@layout/drawer_layout_fragment" />
     <fragment
-        android:id="@+id/fragment03"
-        android:name="com.artofmainstreams.examples.ui.example03.Fragment03"
-        android:label="Fragment03"
-        tools:layout="@layout/fragment03" />
-    <fragment
-        android:id="@+id/fragment04"
-        android:name="com.artofmainstreams.examples.ui.example04.Fragment04"
-        android:label="Fragment04"
-        tools:layout="@layout/fragment04" />
-    <fragment
-        android:id="@+id/fragment05"
-        android:name="com.artofmainstreams.examples.ui.example05.Fragment05"
-        android:label="Fragment05"
-        tools:layout="@layout/fragment05" />
-    <fragment
-        android:id="@+id/fragment06"
-        android:name="com.artofmainstreams.examples.ui.example06.Fragment06"
-        android:label="Fragment06"
-        tools:layout="@layout/fragment06" />
-    <fragment
-        android:id="@+id/fragment07"
-        android:name="com.artofmainstreams.examples.ui.example07.Fragment07"
-        android:label="Fragment07"
-        tools:layout="@layout/fragment07" />
+        android:id="@+id/viewPagerFragment"
+        android:name="com.artofmainstreams.examples.ui.view_pager.ViewPagerFragment"
+        android:label="ViewPagerFragment"
+        tools:layout="@layout/view_pager_fragment" />
 </navigation>
