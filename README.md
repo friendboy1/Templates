@@ -1,12 +1,8 @@
 # Description
-Sandbox с разными шпаргалками
+Всё про Android. RecyclerView, CustomView и т.д.
 
 ## Navigation
-+ [animation](../animation) - всё про анимацию
-+ [coroutines](../coroutines) - всё про корутины
-+ [kotlin](../kotlin) - всё про котлин
-+ [pattern](../pattern) - всё про паттерны
-+ [architecture](../architecture) - всё про архитектуру
-+ [jetpack](../jetpack) - всё про jetpack
-+ [di](../di) - всё про Dependency Injection
-+ [android](../android) - всё про Android
++ [up](../master)
++ [root](../master)
++ android/[recycler-view](../android_recycler-view) - всё про RecyclerView
++ android/[custom-view](../android_custom-view) - всё про CustomView
