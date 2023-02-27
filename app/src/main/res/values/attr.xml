@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="BasicCustomView">
+        <attr name="type" format="enum" >
+            <enum name="example1" value="0"/>
+            <enum name="example2" value="1"/>
+            <enum name="example3" value="2"/>
+            <enum name="example4" value="3"/>
+            <enum name="example5" value="4"/>
+            <enum name="example6" value="5"/>
+            <enum name="example7" value="6"/>
+            <enum name="example8" value="7"/>
+            <enum name="example9" value="8"/>
+            <enum name="example10" value="9"/>
+            <enum name="example11" value="10"/>
+        </attr>
+    </declare-styleable>
+</resources>
