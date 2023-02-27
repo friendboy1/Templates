@@ -49,6 +49,7 @@ dependencies {
     implementation 'androidx.activity:activity-compose'
     // Compose Material Design
     implementation 'androidx.compose.material:material'
+    implementation 'androidx.compose.material:material-icons-extended'
     // Animations
     implementation 'androidx.compose.animation:animation'
     // Tooling support (Previews, etc.)
@@ -59,6 +60,8 @@ dependencies {
     debugImplementation 'androidx.compose.ui:ui-test-manifest'
     // Integration with ViewModels
     implementation 'androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1'
+    // Constraint Layout
+    implementation 'androidx.constraintlayout:constraintlayout-compose:1.0.1'
 
     implementation 'androidx.core:core-ktx:1.10.1'
     implementation 'androidx.appcompat:appcompat:1.6.1'

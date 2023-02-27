@@ -2,6 +2,7 @@
     <string name="app_name">Examples</string>
     <string name="next">Вперёд</string>
     <string name="back">Назад</string>
+    <string name="hello">Hello, %s!</string>
     <string name="fragment01">Fragment01</string>
     <string name="fragment02">Fragment02</string>
     <string name="fragment03">Fragment03</string>
@@ -9,4 +10,6 @@
     <string name="fragment05">Fragment05</string>
     <string name="fragment06">Fragment06</string>
     <string name="fragment07">Fragment07</string>
+    <string name="review_rating_message">Rate movie:</string>
+    <string name="stars_description">Stars counter</string>
 </resources>
