@@ -1,11 +1,7 @@
 # Description
-Sandbox с разными шпаргалками
+Android Jetpack — это набор библиотек, направленных на то, чтобы помочь вам легко писать высококачественные приложения, поддерживая более старые версии Android
 
 ## Navigation
-+ [animation](https://github.com/friendboy1/Templates/tree/animation) - всё про анимацию
-+ [coroutines](https://github.com/friendboy1/Templates/tree/coroutines) - всё про корутины
-+ [kotlin](https://github.com/friendboy1/Templates/tree/kotlin) - всё про котлин
-+ [architecture](https://github.com/friendboy1/Templates/tree/architecture) - всё про архитектуру
-+ [jetpack](https://github.com/friendboy1/Templates/tree/jetpack) - всё про jetpack
-+ [dagger](https://github.com/friendboy1/Templates/tree/dagger) - всё про Dagger 2
-+ [android](https://github.com/friendboy1/Templates/tree/android) - всё про Android
++ [up](https://github.com/friendboy1/Templates/tree/master)
++ [root](https://github.com/friendboy1/Templates/tree/master)
++ jetpack/[compose](https://github.com/friendboy1/Templates/tree/jetpack_compose) - всё по jetpack compose
