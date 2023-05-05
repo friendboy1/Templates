@@ -4,40 +4,67 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
+import android.widget.TextView
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.platform.ComposeView
+import androidx.compose.ui.platform.ViewCompositionStrategy
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.viewinterop.AndroidViewBinding
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.artofmainstreams.examples.R
 import com.artofmainstreams.examples.databinding.Fragment02Binding
+import com.artofmainstreams.examples.databinding.FragmentContainerBinding
+import com.artofmainstreams.examples.ui.example01.Hello
 import com.artofmainstreams.examples.ui.example03.Fragment03
 
+/**
+ * Пример использования нескольких ComposeView
+ * В этом случае нужно указывать id для правильного восстановления состояния
+ */
 class Fragment02 : Fragment()  {
-    private lateinit var binding: Fragment02Binding
-
-    private lateinit var viewModel: ViewModel02
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-        binding = Fragment02Binding.inflate(inflater, container, false)
-        return binding.root
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        viewModel = ViewModelProvider(this)[ViewModel02::class.java]
-        binding.buttonNext.setOnClickListener {
-            Fragment03.start(this)
-        }
-        binding.buttonBack.setOnClickListener {
-            findNavController().popBackStack()
-        }
+    ): View = LinearLayout(requireContext()).apply {
+        addView(
+            ComposeView(requireContext()).apply {
+                setViewCompositionStrategy(
+                    ViewCompositionStrategy.DisposeOnViewTreeLifecycleDestroyed
+                )
+                id = R.id.compose_view_x
+                setContent {
+                    Hello(name = "World!")
+                }
+            }
+        )
+        addView(TextView(requireContext()).apply {
+            text = getString(R.string.some_text)
+        })
+        addView(
+            ComposeView(requireContext()).apply {
+                setViewCompositionStrategy(
+                    ViewCompositionStrategy.DisposeOnViewTreeLifecycleDestroyed
+                )
+                id = R.id.compose_view_y
+                setContent {
+                    Hello(name = "World!")
+                }
+            }
+        )
     }
 
     companion object {
-        fun start(from: Fragment) {
-            from.findNavController().navigate(R.id.fragment02)
+
+        @Composable
+        fun Start() {
+            AndroidViewBinding(FragmentContainerBinding::inflate) {
+                val myFragment = fragmentContainerView.getFragment<Fragment02>()
+                // ...
+            }
         }
     }
 }

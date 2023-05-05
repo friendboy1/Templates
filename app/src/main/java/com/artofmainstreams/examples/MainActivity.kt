@@ -28,25 +28,23 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.graphics.Color
+import androidx.fragment.app.FragmentActivity
 import androidx.navigation.NavController
-import androidx.navigation.Navigation
+import com.artofmainstreams.examples.ui.example02.Fragment02
 
 /**
  * Если предполагается Activity на Compose, то заменить наследование на ComponentActivity
  * и раскомментить setContent
  */
-class MainActivity : AppCompatActivity() {
+class MainActivity : FragmentActivity() {
 
     private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        setContentView(R.layout.main_activity)
-        navController = Navigation.findNavController(this, R.id.nav_host_fragment)
-//        setContent {
-//            MessageCard(Message("Android", "JetPack Compose"))
-//        }
+        setContent {
+            Fragment02.Start()
+        }
     }
 
     data class Message(val author: String, val body: String)
@@ -89,7 +87,9 @@ class MainActivity : AppCompatActivity() {
                     // surfaceColor color will be changing gradually from primary to surface
                     color = surfaceColor,
                     // animateContentSize will change the Surface size gradually
-                    modifier = Modifier.animateContentSize().padding(1.dp)
+                    modifier = Modifier
+                        .animateContentSize()
+                        .padding(1.dp)
                 ) {
                     Text(
                         text = msg.body,
