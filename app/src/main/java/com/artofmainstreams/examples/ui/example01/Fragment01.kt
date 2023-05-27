@@ -59,13 +59,14 @@ class Fragment01 : Fragment() {
         lifecycleScope.launch {
             // привязан к ЖЦ фрагмента
             // onCreate() -> onDestroy()
-            whenCreated {
+            // для одиночных операций non-suspend:
+            withCreated {
                 // onCreate() -> onDestroy()
             }
-            whenStarted {
+            withStarted {
                 // onStart() -> onDestroy()
             }
-            whenResumed {
+            withResumed {
                 // onResume() -> onDestroy()
             }
         }

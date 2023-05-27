@@ -4,8 +4,10 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.liveData
 import androidx.lifecycle.viewModelScope
-import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.SharingStarted.Companion.WhileSubscribed
+import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.flowOf
+import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 
 class ViewModel01 : ViewModel() {
@@ -23,7 +25,15 @@ class ViewModel01 : ViewModel() {
         emit(useCase.invoke())
     }
 
-    val dataFlow: Flow<String> = flowOf()
+    /**
+     * Рекомендуемый подход, чтобы при смене конфигурации не обращаться снова к репозиторию,
+     * но при этом при уходе с экрана больше, чем на 5 секунд отменялась подписка
+     */
+    val dataFlow: StateFlow<String> = flowOf<String>().stateIn(
+        initialValue = "",
+        scope = viewModelScope,
+        started = WhileSubscribed(5000)
+    )
 
     fun doSomething() {
         viewModelScope.launch {
