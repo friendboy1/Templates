@@ -228,7 +228,7 @@ composable("details/{id}",
   }) { /*...*/ }
 ```
 
-## Deeplink 
+### Deeplink 
 Работает из коробки только если нет каких-нибудь экранов авторизации
 ```kotlin
 composable(
