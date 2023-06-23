@@ -28,7 +28,7 @@ class Fragment07 : Fragment()  {
         super.onViewCreated(view, savedInstanceState)
         viewModel = ViewModelProvider(this)[ViewModel07::class.java]
         binding.buttonNext.setOnClickListener {
-            Fragment01.start(this)
+            Fragment01.start(this, TOP_NEWS_ID)
         }
         binding.buttonBack.setOnClickListener {
             findNavController().popBackStack()
@@ -36,6 +36,8 @@ class Fragment07 : Fragment()  {
     }
 
     companion object {
+        private const val TOP_NEWS_ID = "top"
+
         fun start(from: Fragment) {
             from.findNavController().navigate(R.id.fragment07)
         }

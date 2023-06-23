@@ -9,7 +9,12 @@
         android:id="@+id/fragment01"
         android:name="com.artofmainstreams.examples.ui.example01.Fragment01"
         android:label="Fragment01"
-        tools:layout="@layout/fragment01" />
+        tools:layout="@layout/fragment01" >
+        <argument
+            android:name="news_id"
+            app:argType="string"
+            android:defaultValue="top" />
+    </fragment>
     <fragment
         android:id="@+id/fragment02"
         android:name="com.artofmainstreams.examples.ui.example02.Fragment02"
