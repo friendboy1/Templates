@@ -2,8 +2,8 @@
 Котлин. Extension. Все примеры в файле ```ExtensionsUnitTest.kt```
 
 ## Navigation
-+ [up](https://github.com/friendboy1/Templates/tree/kotlin)
-+ [root](https://github.com/friendboy1/Templates/tree/master)
++ [up](../kotlin)
++ [root](../master)
 
 ## Details
 android ktx для упрощения жизни</br>
