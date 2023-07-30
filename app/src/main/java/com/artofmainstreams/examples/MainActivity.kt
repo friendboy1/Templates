@@ -2,17 +2,16 @@ package com.artofmainstreams.examples
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.artofmainstreams.examples.ui.main.MainFragment
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_activity)
-        if (savedInstanceState == null) {
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.container, MainFragment.newInstance())
-                .commitNow()
-        }
+        navController = Navigation.findNavController(this, R.id.nav_host_fragment)
     }
 }
