@@ -9,8 +9,14 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.transition.ChangeBounds
+import androidx.transition.TransitionSet
 import com.artofmainstreams.examples.R
 import com.artofmainstreams.examples.databinding.Fragment02Binding
+import com.artofmainstreams.examples.ui.CustomTransition
+import com.artofmainstreams.examples.ui.CustomTransition2
+import com.artofmainstreams.examples.ui.RotateTransition
+import com.artofmainstreams.examples.ui.RotateTransition2
 import com.artofmainstreams.examples.ui.example03.Fragment03
 import com.artofmainstreams.examples.ui.example02.adapter.CountriesAdapter
 import kotlin.collections.ArrayList
@@ -28,6 +34,29 @@ class Fragment02 : Fragment()  {
         binding = Fragment02Binding.inflate(inflater, container, false)
         initView()
         return binding.root
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        val transitionSetStart = TransitionSet().apply {
+            ordering = TransitionSet.ORDERING_TOGETHER
+            addTransition(ChangeBounds().apply {
+                duration = 5000
+            })
+            addTransition(CustomTransition2())
+            addTransition(RotateTransition(90f, 0f))
+        }
+//        val transitionSetEnd = TransitionSet().apply {
+//            ordering = TransitionSet.ORDERING_TOGETHER
+//            addTransition(RotateTransition(-90f, 0f))
+//            addTransition(CustomTransition2())
+//            addTransition(ChangeBounds().apply {
+//                duration = 5000
+//            })
+//        }
+        sharedElementEnterTransition = transitionSetStart
+//        sharedElementReturnTransition = transitionSetEnd
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

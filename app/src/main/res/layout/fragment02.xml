@@ -7,6 +7,19 @@
     android:layout_height="match_parent"
     tools:context=".ui.example02.Fragment02">
 
+
+    <ImageView
+        android:id="@+id/iv_card"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:transitionName="image_start"
+        app:layout_constraintBottom_toTopOf="@+id/recycler_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/message"
+        android:background="@color/color_blue_800"
+        android:src="@drawable/card3" />
+
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/message"
         android:layout_width="wrap_content"
@@ -22,7 +35,7 @@
         android:layout_height="0dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/message"
+        app:layout_constraintTop_toBottomOf="@+id/iv_card"
         app:layout_constraintBottom_toTopOf="@+id/button_back"
         android:clipToPadding="false"/>
 

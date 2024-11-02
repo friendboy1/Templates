@@ -8,8 +8,13 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.transition.ChangeBounds
+import androidx.transition.ChangeImageTransform
+import androidx.transition.Fade
+import androidx.transition.TransitionSet
 import com.artofmainstreams.examples.R
 import com.artofmainstreams.examples.databinding.Fragment01Binding
+import com.artofmainstreams.examples.ui.RotateTransition2
 import com.artofmainstreams.examples.ui.example01.adapter.TodoSectionAdapter
 import com.artofmainstreams.examples.ui.example02.Fragment02
 
@@ -45,6 +50,22 @@ class Fragment01 : Fragment()  {
         }
         binding.buttonBack.setOnClickListener {
             findNavController().popBackStack()
+        }
+        binding.ivCard.setOnClickListener {
+            val fragment2 = Fragment02()
+            //exitTransition = RotateTransition2()
+//            fragment2.sharedElementEnterTransition = TransitionSet().apply {
+//                addTransition(RotateTransition2())
+//                addTransition(ChangeImageTransform())
+//                addTransition(Fade())
+//                ordering = TransitionSet.ORDERING_TOGETHER
+//            }
+            parentFragmentManager.beginTransaction()
+                .setReorderingAllowed(true)
+                .addSharedElement(it, "image_start")
+                .replace(R.id.nav_host_fragment, fragment2, null)
+                .addToBackStack(null)
+                .commit()
         }
     }
 
