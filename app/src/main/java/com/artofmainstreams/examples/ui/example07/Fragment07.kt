@@ -1,31 +1,24 @@
 package com.artofmainstreams.examples.ui.example07
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.artofmainstreams.examples.R
 import com.artofmainstreams.examples.databinding.Fragment07Binding
 import com.artofmainstreams.examples.ui.example01.Fragment01
+import com.artofmainstreams.examples.util.viewBinding
 
-class Fragment07 : Fragment()  {
-    private lateinit var binding: Fragment07Binding
+class Fragment07 : Fragment(R.layout.fragment07) {
+    private var binding by viewBinding<Fragment07Binding>()
 
     private lateinit var viewModel: ViewModel07
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        binding = Fragment07Binding.inflate(inflater, container, false)
-        return binding.root
-    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding = Fragment07Binding.bind(view)
         viewModel = ViewModelProvider(this)[ViewModel07::class.java]
         binding.buttonNext.setOnClickListener {
             Fragment01.start(this)
